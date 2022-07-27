@@ -77,6 +77,6 @@ tl;dr if you don't need to include a contact form, or you have your own implemen
 
 # License
 
-This software is licensed under MIT. It uses libraries and third-party software that may be licensed otherwise.
+This software is licensed under MIT. See `LICENSE.md`.
 
-When bundling your projects with this template, please keep an eye out for any third-party licenses and ensure you're respecting them as well.
+It uses third-party software that be filed under MIT or other open-source licenses.
