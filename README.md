@@ -37,7 +37,7 @@ An opinionated project template to design and develop static websites without re
 
 # Getting started
 
-1. Clone the repo, or download the source tarball from [npm](https://npmjs.com/bglamadrid/pugtail), or produce a new repo from the GitHub template
+1. Clone the repo, or produce a new repo from the GitHub template.
 2. Rename `index.pug.example` to `index.pug` to start working.
 
 You have three available commands from the ground-up:
