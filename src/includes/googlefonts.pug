@@ -1,0 +1,8 @@
+-
+  const families = [
+    'Work Sans'
+  ];
+  const familiesQueryString = families.map(f => `family=${encodeURIComponent(f)}`).join('&');
+link(href='https://fonts.googleapis.com' rel='preconnect')
+link(href='https://fonts.gstatic.com' rel='preconnect' crossorigin)
+link(href=`https://fonts.googleapis.com/css2?${familiesQueryString}&display=swap` rel='stylesheet')

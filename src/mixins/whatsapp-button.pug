@@ -1,0 +1,10 @@
+mixin whatsapp-button(instanceData)
+  -
+    const mixinClass = attributes.class ? ` ${attributes.class}` : '';
+    const whatsappUrl = `https://wa.me/${instanceData.rawNumber}`;
+    const linkTarget = instanceData.target || '_blank';
+  a(class='grid grid-flow-col gap-2 place-content-center shadow-md duration-150 bg-green-600 hover:bg-green-700 hover:scale-105' + mixinClass
+  href=`${whatsappUrl}?text=${encodeURIComponent(instanceData.templateMessage)}`
+  target=linkTarget)
+    +icon({ source: 'simple-icons', name: 'whatsapp' })(class='w-6 invert')
+    span(class='text-white')=instanceData.label

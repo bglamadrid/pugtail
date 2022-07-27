@@ -1,0 +1,171 @@
+{
+  "site": {
+    "url": "#",
+    "locale": "es",
+    "navigation": {
+      "enabled": false,
+      "links": [
+        {
+          "url": "#",
+          "title": "Inicio"
+        },
+        {
+          "url": "#services",
+          "title": "Servicios"
+        },
+        {
+          "url": "https://google.com",
+          "title": "Google"
+        }
+      ]
+    },
+    "extensions": {
+      "google": {
+        "maps": [
+          {
+            "usage": "iframe-embed",
+            "queryParams": {
+              "pb": ""
+            },
+            "title": "Ubicación en Google Maps"
+          }
+        ],
+        "drive": [
+          {
+            "usage": "iframe-embed",
+            "queryParams": {
+              "id": ""
+            },
+            "title": "Carpeta en Google Drive"
+          }
+        ]
+      }
+    }
+  },
+  "business": {
+    "name": "{{ Nombre de la Marca }}",
+    "about": {
+      "identity": {
+        "title": "Somos",
+        "paragraphs": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat a lectus faucibus varius. Praesent id sapien eget neque hendrerit malesuada efficitur nec mi. Etiam dapibus pretium est, in commodo quam venenatis sed. Curabitur ut elementum libero. Sed in suscipit mauris. Nam at dui cursus, mattis lacus ut, volutpat massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+        ],
+        "icon": {
+          "source": "fontawesome",
+          "name": "users"
+        }
+      },
+      "mission": {
+        "title": "Misión",
+        "paragraphs": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat a lectus faucibus varius. Praesent id sapien eget neque hendrerit malesuada efficitur nec mi. Etiam dapibus pretium est, in commodo quam venenatis sed. Curabitur ut elementum libero. Sed in suscipit mauris. Nam at dui cursus, mattis lacus ut, volutpat massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+        ],
+        "icon": {
+          "source": "fontawesome",
+          "name": "thumbs-up"
+        }
+      },
+      "vision": {
+        "title": "Visión",
+        "paragraphs": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat a lectus faucibus varius. Praesent id sapien eget neque hendrerit malesuada efficitur nec mi. Etiam dapibus pretium est, in commodo quam venenatis sed. Curabitur ut elementum libero. Sed in suscipit mauris. Nam at dui cursus, mattis lacus ut, volutpat massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+        ],
+        "icon": {
+          "source": "fontawesome",
+          "name": "flag"
+        }
+      }
+    },
+    "logo": {
+      "default": {
+        "aliasedUrl": "",
+        "absoluteUrl": "https://fakeimg.pl/100x100"
+      }
+    },
+    "contact": {
+      "whatsapp": [
+        {
+          "rawNumber": "56999999999",
+          "prettifiedNumber": "+569 9999 9999",
+          "description": ""
+        }
+      ],
+      "phone": [
+        {
+          "rawNumber": "299999999",
+          "prettifiedNumber": "2 9999 9999",
+          "description": ""
+        }
+      ],
+      "email": [
+        "lorem@ipsum.com"
+      ]
+    },
+    "socialLinks": {
+      "facebook": [
+        {
+          "id": "some-facebook-id",
+          "elementClasses": [
+          ]
+        }
+      ],
+      "instagram": [
+        {
+          "id": "some-instagram-id",
+          "elementClasses": [
+          ]
+        }
+      ]
+    },
+    "services": {
+      "service-a": {
+        "name": "Item A",
+        "thumb": {
+          "aliasedUrl": "",
+          "absoluteUrl": "https://fakeimg.pl/200x200",
+          "description": ""
+        }
+      },
+      "service-b": {
+        "name": "Item B",
+        "thumb": {
+          "aliasedUrl": "",
+          "absoluteUrl": "https://fakeimg.pl/200x200",
+          "description": ""
+        }
+      },
+      "service-c": {
+        "name": "Item C",
+        "thumb": {
+          "aliasedUrl": "",
+          "absoluteUrl": "https://fakeimg.pl/200x200",
+          "description": ""
+        }
+      },
+      "service-d": {
+        "name": "Item D",
+        "thumb": {
+          "aliasedUrl": "",
+          "absoluteUrl": "https://fakeimg.pl/200x200",
+          "description": ""
+        }
+      },
+      "service-e": {
+        "name": "Item E",
+        "thumb": {
+          "aliasedUrl": "",
+          "absoluteUrl": "https://fakeimg.pl/200x200",
+          "description": ""
+        }
+      },
+      "service-f": {
+        "name": "Item F",
+        "thumb": {
+          "aliasedUrl": "",
+          "absoluteUrl": "https://fakeimg.pl/200x200",
+          "description": ""
+        }
+      }
+    }
+  }
+}

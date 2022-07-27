@@ -1,0 +1,32 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/.idea
+/.vscode
+/.history
+/.settings
+.project
+.classpath
+.c9/
+*.launch
+*.sublime-workspace
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# binary files, assets
+/src/images
+
+# environments
+/src/environment.*.ts

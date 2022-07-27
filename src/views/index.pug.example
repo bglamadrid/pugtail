@@ -1,0 +1,91 @@
+include ../mixins/extensions/google-drive-embed.pug
+include ../mixins/extensions/google-maps-embed.pug
+include ../mixins/metatags/self.pug
+include ../mixins/metatags/facebook.pug
+include ../mixins/metatags/twitter.pug
+include ../mixins/contact-form.pug
+include ../mixins/footer.pug
+include ../mixins/header.pug
+include ../mixins/icon.pug
+-
+  const data = require('../data.json');
+  const pageMetadata = {
+    url: `${data.site.url}/index.html`,
+    title: `${data.business.name} - Inicio`,
+    description: '',
+    image: data.business.logo.default.absoluteUrl
+  };
+
+doctype html
+html(lang=data.site.locale)
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    link(href='https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css' rel='stylesheet')
+    link(href='https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css' rel='stylesheet')
+
+    link(href=require('../styles.css') rel='stylesheet')
+    //- link(href=require('../favicon.ico') rel='icon' type='image/x-icon')
+    script(defer src=require('~Scripts/contact.ts'))
+    script(defer src=require('~Scripts/index/splides.ts'))
+    script(defer src=require('~Scripts/index/scrolling_animations.ts'))
+
+    include ../includes/googlefonts.pug
+
+    title=pageMetadata.title
+
+    +metatags-self(pageMetadata)
+    +metatags-facebook(pageMetadata)
+    +metatags-twitter(pageMetadata)
+
+  body(class='bg-slate-100 dark:bg-slate-800 dark:text-white')
+    h1(class='hidden')=pageTitle
+    +header(data)
+    section#facade(class='bg-slate-200 dark:bg-slate-700')
+      .container(class='grid grid-cols-1 content-center justify-items-center max-w-screen-xl mx-auto md:min-h-fullscreen')
+        .splide(class='my-16 md:mx-16' aria-label='Carrusel de ejemplo')
+          .splide__arrows
+          .splide__track
+            ul.splide__list
+              li.splide__slide
+                img(src='https://fakeimg.pl/1200x400' alt='Imagen de ejemplo')
+              li.splide__slide
+                img(src='https://fakeimg.pl/1200x400' alt='Imagen de ejemplo')
+              li.splide__slide
+                img(src='https://fakeimg.pl/1200x400' alt='Imagen de ejemplo')
+    section#services
+      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-xl mx-auto md:gap-6')
+        h2(class='mt-16') Servicios
+        .grid(class='gap-2 grid-cols-2 justify-items-center content-center mb-16 px-2 md:grid-cols-3 lg:grid-cols-none lg:grid-flow-col md:gap-4 md:px-4')
+          each service, serviceClassName in data.business.services
+            - const thumbSrc = service.thumb.aliasedUrl ? require(service.thumb.aliasedUrl) : service.thumb.absoluteUrl;
+            .card(class='shadow rounded bg-slate-700 ' + serviceClassName)
+              h3(class='text-center my-2')=service.name
+              img.thumb(src=thumbSrc
+              aria-hidden='true'
+              loading='lazy')
+    section#about(class='bg-slate-200 dark:bg-slate-700')
+      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
+        .grid(class='gap-4 justify-items-center content-center px-4 my-16 md:grid-flow-col')
+          each node, nodeClassName in data.business.about
+            .card(class='grid gap-4 place-content-center p-8 shadow rounded bg-white dark:bg-slate-800 ' + nodeClassName)
+              +icon(node.icon)(class='w-8 mx-auto dark:invert sm:w-12')
+              h2(class='text-center')=node.title
+              each paragraph in node.paragraphs
+                p(class='text-center')=paragraph
+    section#contact
+      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto px-4 md:gap-6 lg:px-0')
+        h2(class='mt-16') Contacto
+        p(class='text-center') Puedes dejarnos un mensaje usando este formulario.
+        +contact-form()(class='mb-16')
+    section#storage(class='bg-slate-200 dark:bg-slate-700')
+      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
+        h2(class='mt-16') Carpeta en Google Drive
+        +google-drive-embed(data.site.extensions.google.drive[0])(class='h-40 w-5/6 mb-16 md:h-64')
+    section#location
+      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
+        h2(class='mt-16') Ubicación en Google Maps
+        +google-maps-embed(data.site.extensions.google.maps[0])(class='h-40 w-5/6 mb-16 md:h-64')
+    +footer(data)

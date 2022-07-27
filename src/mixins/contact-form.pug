@@ -1,0 +1,45 @@
+mixin contact-form()
+  -
+    const mixinClass = attributes.class ? ` ${attributes.class}` : '';
+  form(class='grid grid-cols-1 gap-4 justify-items-stretch md:w-full md:grid-cols-12' + mixinClass)
+    .fullname(class='flex flex-col w-full text-left md:row-start-1 md:col-span-12')
+      label(class='flex-shrink-0 w-full mb-2'
+      for='fullname-input') Nombre completo *
+      input#fullname-input.form-control(required
+      class='flex-grow shadow w-full p-2 rounded ring-1 ring-neutral-400'
+      type='text'
+      name='fullname'
+      maxlength='80'
+      placeholder='Maximiliano Fabian Carrera')
+    .email(class='flex flex-col w-full text-left md:row-start-2 md:col-span-8')
+      label(class='flex-shrink-0 w-full mb-2'
+      for='email-input') E-Mail *
+      input#email-input.form-control(required
+      class='flex-grow shadow w-full p-2 rounded ring-1 ring-neutral-400'
+      type='email'
+      name='email'
+      maxlength='60'
+      placeholder='maxcarrera@ejemplo.com')
+    .phone(class='flex flex-col w-full text-left md:row-start-2 md:col-span-4')
+      label(class='flex-shrink-0 w-full mb-2'
+      for='phone-input') Nro. teléfono
+      input#phone-input.form-control(
+      class='flex-grow shadow w-full p-2 rounded ring-1 ring-neutral-400'
+      type='text'
+      name='phone'
+      minlength='9'
+      maxlength='9'
+      placeholder='+569 XXXX XXXX / 2 XXXX XXXX')
+    .comments(class='flex flex-col w-full text-left md:row-start-3 md:col-span-12')
+      label(class='flex-shrink-0 w-full mb-2'
+      for='comments-input') Mensaje *
+      textarea#comments-input.form-control(required
+      class='flex-grow shadow w-full p-2 rounded ring-1 ring-neutral-400'
+      name='comments'
+      rows='5'
+      maxlength='2000'
+      placeholder='Cuéntanos qué es lo que necesitas')
+    .actions(class='text-center md:row-start-4 md:col-span-12')
+      p(class='italic mb-3') Los campos marcados con un asterisco (*) son obligatorios.
+      button(type='submit'
+      class='py-2 px-8 rounded bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white') Quiero que me contacten
