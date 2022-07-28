@@ -2,6 +2,8 @@
 
 An opinionated project template to design and develop static websites without resorting to use an entire framework for the job.
 
+It encourages to write as little markup as possible, still keeping it easy to read & convey from its corresponding HTML and CSS syntax and semantics.
+
 
 # Features
 
@@ -18,16 +20,19 @@ An opinionated project template to design and develop static websites without re
 - A few code snippets to include common design feats:
   - `/src/lib/scrolling_animations.ts` provides a TS type and an RxJS function to easily include animations triggered when scrolling down to elements targetted by query selectors.
   - `/src/lib/splides.ts` boilerplate with a function to invoke `Splide`s in your page with very little code.
-  - `/src/scripts/contact.ts` is a simple script to provide interaction with a contact form. It depends on  an environment file to provide some variables, read section `A note about building in production mode` below.
+  - `/src/scripts/contact.ts` is a simple script to provide interaction with a contact form. It depends on an environment file to provide some variables, read section `A note about building in production mode` below.
   - All of these are included in the packaged `index.pug.example` file
-- A few Pug mixins/subtemplates to separate/reuse very common pieces of code:
-  - Header & footer
-  - Contact form
-  - Google Maps iFrame Embed
-  - Icons served from public-facing, NPM-based CDNs
-    - [FontAwesome Free](https://fontawesome.com)
-    - [SimpleIcons.org](https://simpleicons.org)
-
+- Examples to organize the codebase
+  - Pug mixin functions
+    - Header & footer
+    - Contact form
+    - Google Maps iFrame Embed
+    - Metatags
+    - Icons from awesome free libraries, served through jsDelivr CDN
+      - [FontAwesome Free](https://fontawesome.com)
+      - [SimpleIcons.org](https://simpleicons.org)
+  - Pug Subtemplates (that can be `include`d)
+    - Fonts served by public Google Fonts CDN
 
 
 # Requirements
