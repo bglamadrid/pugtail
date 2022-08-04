@@ -43,7 +43,7 @@ It encourages to write as little markup as possible, still keeping it easy to re
 # Getting started
 
 1. Clone the repo, or produce a new repo from the GitHub template.
-2. Rename `index.pug.example` to `index.pug` to start working.
+2. Rename `index.example.pug` to `index.pug` to start working.
 
 You have three available commands from the ground-up:
 - `npm run build` will build the production-ready static site on `/dist` directory
