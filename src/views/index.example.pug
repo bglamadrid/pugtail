@@ -9,6 +9,7 @@ include ../mixins/header.pug
 include ../mixins/icon.pug
 -
   const data = require('../data.json');
+  const environment = require('../environment.ts');
   const pageMetadata = {
     url: `${data.site.url}/index.html`,
     title: `${data.business.name} - Inicio`,
@@ -42,7 +43,7 @@ html(lang=data.site.locale)
 
   body(class='bg-slate-100 dark:bg-slate-800 dark:text-white')
     h1(class='hidden')=pageTitle
-    +header(data)
+    +header(data, environment)
     section#facade(class='bg-slate-200 dark:bg-slate-700')
       .container(class='grid grid-cols-1 content-center justify-items-center max-w-screen-xl mx-auto md:min-h-fullscreen')
         .splide(class='my-16 md:mx-16' aria-label='Carrusel de ejemplo')
