@@ -1,9 +1,23 @@
-# What is this
+<div align="center">
+  <div>
+    <a href="https://pugjs.org">
+      <img src="https://cdn.rawgit.com/pugjs/pug-logo/eec436cee8fd9d1726d7839cbe99d1f694692c0c/SVG/pug-final-logo-_-colour-128.svg"
+      height="135">
+    </a>
+    <a href="https://pugjs.org">
+      <img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg"
+      height="110">
+    </a>
+  </div>
 
-An opinionated project template to design and develop static websites without resorting to use an entire framework for the job.
+  **PUGTAIL**
 
-It encourages to write as little markup as possible, still keeping it easy to read & convey from its corresponding HTML and CSS syntax and semantics.
+  An opinionated project template that helps you design, develop, deploy and iterate static websites quickly.
 
+  Write markup that is easy to read and convey as HTML/CSS, without needing to learn a whole new framework.
+
+  [![latest](https://img.shields.io/github/v/tag/bglamadrid/pugtail?label=latest)](https://github.com/bglamadrid/pugtail/tags)
+</div>
 
 # Features
 
@@ -17,12 +31,12 @@ It encourages to write as little markup as possible, still keeping it easy to re
   - [Splide](https://splidejs.com) to create accessible carousels (and alike UI elements) with ease and flexibility.
   - [Animate.css](https://animate.style) to have a defined set of CSS keyframes (animations) to work with.
   - [RxJS](https://rxjs.dev) to add readable, async client-side functionality.
-- A few code snippets to include common design feats:
-  - `/src/lib/scrolling_animations.ts` provides a TS type and an RxJS function to easily include animations triggered when scrolling down to elements targetted by query selectors.
-  - `/src/lib/splides.ts` boilerplate with a function to invoke `Splide`s in your page with very little code.
-  - `/src/scripts/contact.ts` is a simple script to provide interaction with a contact form. It depends on an environment file to provide some variables, read section `A note about building in production mode` below.
-  - All of these are included in the packaged `index.pug.example` file
-- Examples to organize the codebase
+- A simple project structure
+  - Scripts to include common design feats
+    - `/src/lib/scrolling_animations.ts` provides a TS type and an RxJS function to easily include animations triggered when scrolling down to elements targetted by query selectors.
+    - `/src/lib/splides.ts` exports a typed function to invoke `Splide`s in your page with very little code.
+    - `/src/scripts/contact.ts` is a simple script to provide submission of a contact form with . It depends on an environment file to provide some variables, read section `Building in production mode` below.
+    - All of these are included in the packaged `index.pug.example` file
   - Pug mixin functions
     - Header & footer
     - Contact form
@@ -31,7 +45,7 @@ It encourages to write as little markup as possible, still keeping it easy to re
     - Icons from awesome free libraries, served through jsDelivr CDN
       - [FontAwesome Free](https://fontawesome.com)
       - [SimpleIcons.org](https://simpleicons.org)
-  - Pug Subtemplates (that can be `include`d)
+  - Pug subtemplates (that can be `include`d)
     - Fonts served by public Google Fonts CDN
 
 
@@ -42,6 +56,7 @@ It encourages to write as little markup as possible, still keeping it easy to re
 
 # Getting started
 
+To create a new project:
 1. Clone the repo, or produce a new repo from the GitHub template.
 2. Rename `index.example.pug` to `index.pug` to start working.
 
@@ -52,23 +67,23 @@ You have three available commands from the ground-up:
 
 And you can fine-tune the `package.json` scripts to your heart's contempt.
 
-For everything else, the documentation of each tool in the chain should suffice (take a look at each page linked above).
+For everything else, the documentation of each tool in the chain should suffice. There are links to everything this template depends on, do take a look.
 
 
-## Adding images (and/or other assets)
+## Adding images (and other assets)
 
-To include images in your page, create a `/src/images` directory and fill it with your assets. These will not be versioned; this is by design, to help reduce the size of your repo.
+To include images in your page, create a `/src/images` directory and add them there. These will not be versioned; this is by design, to help reduce the size of your repo.
 
-But of course, you can change this setup, e.g. if you want/need to use a different folder, or more than one:
-- Add/edit/remove file patterns in the `/.gitignore`
-- Add/edit/remove file path aliases in `webpack.config.js`
+But of course, you can change this setup, e.g. if you want/need to use a different folder, or more than one. You just must pay attention to the:
+- Filepath patterns in the `/.gitignore` file.
+- Path aliases in the `webpack.config.js` file.
 
-Remember to `require()` all local assets referenced within your `.pug` templates, else they won't be loaded (this syntax is established by the `pug-plugin`).
+Remember to `require()` all local assets referenced within your `.pug` templates, otherwise they won't be loaded (this syntax is established by the `pug-plugin`).
 
 You may also need to support additional image file extensions, if the ones provided in `webpack.config.js` don't suffice.
 
 
-## A note about building in production mode
+## Building in production mode
 
 You _must_ supply an `/src/environment.prod.ts` file to run a production build, otherwise the process will throw an error. This is due to a dependency from the contact form script.
 
@@ -78,6 +93,13 @@ tl;dr if you don't need to include a contact form, or you have your own implemen
 - Comment or remove the `NormalModuleReplacementPlugin` bits in the `webpack.config.js` file.
 - Rewrite the `/src/scripts/contact.ts` file to whatever you need
 - Remove the `/src/scripts/contact.ts` file altogether along any references to it
+
+
+# Contributing
+
+This is a very early-stage project. If you have any suggestions, ideas, or find any bugs while using Pugtail, do not hesitate to create an issue, and hopefully stick around to answer any questions we (well, I) may have.
+
+And in the case of more concrete improvements for the codebase, PRs are welcome.
 
 
 # License
