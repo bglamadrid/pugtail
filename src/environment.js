@@ -1,4 +1,4 @@
-export const ENVIRONMENT = {
+module.exports = {
   isProduction: false,
   urls: {
     home: 'http://localhost:80/index.html'

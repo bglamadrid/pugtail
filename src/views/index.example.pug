@@ -8,10 +8,8 @@ include ../mixins/footer.pug
 include ../mixins/header.pug
 include ../mixins/icon.pug
 -
-  const data = require('../data.json');
-  const environment = require('../environment.ts');
   const pageMetadata = {
-    url: `${data.site.url}/index.html`,
+    url: environment.urls.home,
     title: `${data.business.name} - Inicio`,
     description: '',
     image: data.business.logo.default.absoluteUrl

@@ -29,4 +29,4 @@ Thumbs.db
 /src/images
 
 # environments
-/src/environment.*.ts
+/src/environment.*.js

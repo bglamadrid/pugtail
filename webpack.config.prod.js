@@ -1,6 +1,7 @@
 const path = require('path');
 const PugPlugin = require('pug-plugin');
 const baseConfig = require('./webpack.config.base');
+const { NormalModuleReplacementPlugin } = require('webpack');
 
 module.exports = Object.assign(
   baseConfig,
@@ -21,7 +22,12 @@ module.exports = Object.assign(
         extractCss: {
           filename: 'styles/[name].[contenthash:8].css'
         }
-      })
+      }),
+      // for client-side javascript
+      new NormalModuleReplacementPlugin(
+        /\.\.\/environment/,
+        '../environment.prod.js'
+      )
     ],
     module: {
       rules: [
@@ -33,7 +39,7 @@ module.exports = Object.assign(
             esModule: true,
             data: {
               data: require('./src/data.json'),
-              environment: require('./src/environment.js')
+              environment: require('./src/environment.prod.js') // for pug templates
             }
           }
         }
