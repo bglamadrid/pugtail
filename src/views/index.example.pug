@@ -10,7 +10,7 @@ include ../mixins/icon.pug
 -
   const pageMetadata = {
     url: environment.urls.home,
-    title: `${data.business.name} - Inicio`,
+    title: `${data.business.name} - Home`,
     description: '',
     image: data.business.logo.default.absoluteUrl
   };
@@ -28,6 +28,7 @@ html(lang=data.site.locale)
     link(href=require('../styles.css') rel='stylesheet')
     //- link(href=require('../favicon.ico') rel='icon' type='image/x-icon')
     script(defer src=require('~Scripts/contact.ts'))
+    script(defer src=require('~Scripts/mobile_nav.ts'))
     script(defer src=require('~Scripts/index/splides.ts'))
     script(defer src=require('~Scripts/index/scrolling_animations.ts'))
 
@@ -49,14 +50,14 @@ html(lang=data.site.locale)
           .splide__track
             ul.splide__list
               li.splide__slide
-                img(src='https://fakeimg.pl/1200x400' alt='Imagen de ejemplo')
+                img(src='https://fakeimg.pl/1200x400' alt='Example photo')
               li.splide__slide
-                img(src='https://fakeimg.pl/1200x400' alt='Imagen de ejemplo')
+                img(src='https://fakeimg.pl/1200x400' alt='Example photo')
               li.splide__slide
-                img(src='https://fakeimg.pl/1200x400' alt='Imagen de ejemplo')
+                img(src='https://fakeimg.pl/1200x400' alt='Example photo')
     section#services
       .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-xl mx-auto md:gap-6')
-        h2(class='mt-16') Servicios
+        h2(class='mt-16') Services
         .grid(class='gap-2 grid-cols-2 justify-items-center content-center mb-16 px-2 md:grid-cols-3 lg:grid-cols-none lg:grid-flow-col md:gap-4 md:px-4')
           each service, serviceClassName in data.business.services
             - const thumbSrc = service.thumb.aliasedUrl ? require(service.thumb.aliasedUrl) : service.thumb.absoluteUrl;
@@ -76,15 +77,15 @@ html(lang=data.site.locale)
                 p(class='text-center')=paragraph
     section#contact
       .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto px-4 md:gap-6 lg:px-0')
-        h2(class='mt-16') Contacto
-        p(class='text-center') Puedes dejarnos un mensaje usando este formulario.
+        h2(class='mt-16') Contact
+        p(class='text-center') You can leave us a message through this form.
         +contact-form()(class='mb-16')
     section#storage(class='bg-slate-200 dark:bg-slate-700')
       .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
-        h2(class='mt-16') Carpeta en Google Drive
+        h2(class='mt-16')=data.site.extensions.google.drive[0].title
         +google-drive-embed(data.site.extensions.google.drive[0])(class='h-40 w-5/6 mb-16 md:h-64')
     section#location
       .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
-        h2(class='mt-16') Ubicación en Google Maps
+        h2(class='mt-16')=data.site.extensions.google.maps[0].title
         +google-maps-embed(data.site.extensions.google.maps[0])(class='h-40 w-5/6 mb-16 md:h-64')
     +footer(data)

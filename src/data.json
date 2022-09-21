@@ -1,16 +1,20 @@
 {
   "site": {
-    "locale": "es",
+    "locale": "en",
     "navigation": {
       "enabled": false,
       "links": [
         {
           "url": "#",
-          "title": "Inicio"
+          "title": "Home"
+        },
+        {
+          "url": "#about",
+          "title": "About Us"
         },
         {
           "url": "#services",
-          "title": "Servicios"
+          "title": "Services"
         },
         {
           "url": "https://google.com",
@@ -26,7 +30,7 @@
             "queryParams": {
               "pb": ""
             },
-            "title": "Ubicación en Google Maps"
+            "title": "Google Maps location"
           }
         ],
         "drive": [
@@ -35,17 +39,17 @@
             "queryParams": {
               "id": ""
             },
-            "title": "Carpeta en Google Drive"
+            "title": "Google Drive folder"
           }
         ]
       }
     }
   },
   "business": {
-    "name": "{{ Nombre de la Marca }}",
+    "name": "{{ Brand name }}",
     "about": {
       "identity": {
-        "title": "Somos",
+        "title": "About Us",
         "paragraphs": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat a lectus faucibus varius. Praesent id sapien eget neque hendrerit malesuada efficitur nec mi. Etiam dapibus pretium est, in commodo quam venenatis sed. Curabitur ut elementum libero. Sed in suscipit mauris. Nam at dui cursus, mattis lacus ut, volutpat massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
         ],
@@ -55,7 +59,7 @@
         }
       },
       "mission": {
-        "title": "Misión",
+        "title": "Mission",
         "paragraphs": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat a lectus faucibus varius. Praesent id sapien eget neque hendrerit malesuada efficitur nec mi. Etiam dapibus pretium est, in commodo quam venenatis sed. Curabitur ut elementum libero. Sed in suscipit mauris. Nam at dui cursus, mattis lacus ut, volutpat massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
         ],
@@ -65,7 +69,7 @@
         }
       },
       "vision": {
-        "title": "Visión",
+        "title": "Vision",
         "paragraphs": [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non erat a lectus faucibus varius. Praesent id sapien eget neque hendrerit malesuada efficitur nec mi. Etiam dapibus pretium est, in commodo quam venenatis sed. Curabitur ut elementum libero. Sed in suscipit mauris. Nam at dui cursus, mattis lacus ut, volutpat massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
         ],

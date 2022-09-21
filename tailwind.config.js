@@ -7,6 +7,7 @@ module.exports = {
     files: [
       './src/views/**/*.pug',
       './src/mixins/**/*.pug',
+      './src/scripts/**/*.ts',
       './src/data.json'
     ]
   },
