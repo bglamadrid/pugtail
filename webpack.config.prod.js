@@ -38,7 +38,6 @@ module.exports = Object.assign(
           options: {
             esModule: true,
             data: {
-              data: require('./src/data.json'),
               environment: require('./src/environment.prod.js') // for pug templates
             }
           }

@@ -8,6 +8,7 @@ include ../mixins/footer.pug
 include ../mixins/header.pug
 include ../mixins/icon.pug
 -
+  const data = require('../data.json');
   const pageMetadata = {
     url: environment.urls.home,
     title: `${data.business.name} - Home`,
