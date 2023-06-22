@@ -44,15 +44,14 @@ fromEvent(document, 'DOMContentLoaded').pipe(
 ).subscribe();
 
 function createNavToggleButton() {
-  return Object.assign(
-    document.createElement('button'),
-    {
-      type: 'button',
-      className: 'z-30 duration-300 h-full p-4 bg-gray-100 dark:bg-gray-700 md:hidden',
-      ariaLabel: 'Ir a...',
-      innerHTML: '<img class="icon w-4 dark:invert" alt="bars" src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/bars.svg" />'
-    }
-  ) as HTMLButtonElement;
+  const bareButton = document.createElement('button');
+  return {
+    ...bareButton,
+    type: 'button',
+    className: 'z-30 duration-300 h-full p-4 bg-gray-100 dark:bg-gray-700 md:hidden',
+    ariaLabel: 'Ir a...',
+    innerHTML: '<img class="icon w-4 dark:invert" alt="bars" src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/bars.svg" />'
+  } as HTMLButtonElement;
 }
 
 function toggleNav() {
