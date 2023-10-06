@@ -21,7 +21,7 @@
   "homepage": "https://github.com/bglamadrid/pugtail#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.31",
     "postcss-loader": "^7.0.0",
     "postcss-preset-env": "^7.7.2",
     "pug": "^3.0.2",
