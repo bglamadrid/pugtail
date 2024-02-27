@@ -63,7 +63,7 @@ To create a new project:
 
 You have three available commands from the ground-up:
 - `npm run build` will build the production-ready static site on `/dist` directory
-- `npm run dev` will initiate the `webpack-dev-server` on port 80
+- `npm run dev` will initiate the `webpack-dev-server` on port 8000
 - `npm run watch` will build the site automatically whenever a change is made (but will not embed a webserver)
 
 And you can fine-tune the `package.json` scripts to your heart's contempt.
