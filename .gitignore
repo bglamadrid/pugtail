@@ -29,4 +29,4 @@ Thumbs.db
 /src/images
 
 # environments
-/src/environment.*.js
+/src/environment.*.json
