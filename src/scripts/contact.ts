@@ -1,9 +1,9 @@
 import { EMPTY, finalize, from, fromEvent, map, Observable, of, switchMap, tap } from 'rxjs';
-import { business } from '../data.json';
-import * as ENVIRONMENT from '../environment';
+import * as business from '../business.json';
+import * as environment from '../environment.json';
 
-const ENDPOINT_URL = ENVIRONMENT.endpoints.contact.url;
-const ENDPOINT_SECRET = ENVIRONMENT.endpoints.contact.secret;
+const ENDPOINT_URL = environment.endpoints.contact.url;
+const ENDPOINT_SECRET = environment.endpoints.contact.secret;
 
 const TARGET_EMAIL = business.contact.email[0];
 
@@ -54,7 +54,7 @@ fromEvent(document, 'DOMContentLoaded').pipe(
     tap(e => e.preventDefault()),
     map(() => createPayload())
   )),
-  switchMap(payload => ENVIRONMENT.isProduction ?
+  switchMap(payload => environment.isProduction ?
     sendContactMessage(payload).pipe(
       tap({
         next: () => {

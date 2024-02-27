@@ -1,46 +1,46 @@
 include ./icon.pug
 
-mixin footer(data)
+mixin footer(business)
   footer(class='grid grid-cols-1 gap-6 text-center bg-slate-300 dark:bg-slate-900 md:gap-12')
     .upper(class='container grid grid-cols-1 mx-auto mt-8 md:flex md:justify-evenly')
-      if (data.business.contact.whatsapp.length)
+      if (business.contact.whatsapp.length)
         .whatsapp(class='mx-auto my-4')
           p(class='mb-2 font-semibold dark:font-bold') WhatsApp
-          each w in data.business.contact.whatsapp
+          each w in business.contact.whatsapp
             a(class='grid grid-flow-col gap-3'
             href=`https://wa.me/+${w.rawNumber}`)
               +icon({ source: 'simple-icons', name: 'whatsapp' })(class='w-6 dark:invert')
               span=w.prettifiedNumber
-      if (data.business.contact.phone.length)
+      if (business.contact.phone.length)
         .phone(class='mx-auto my-4')
           p(class='mb-2 font-semibold dark:font-bold') Fono
-          each p in data.business.contact.phone
+          each p in business.contact.phone
             a(class='grid grid-flow-col gap-3'
             href=`tel://+${p.rawNumber}`)
               +icon({ source: 'fontawesome', name: 'phone' })(class='w-6 dark:invert')
               span=p.prettifiedNumber
-      if (data.business.contact.email.length)
+      if (business.contact.email.length)
         .email(class='mx-auto my-4')
           p(class='mb-2 font-semibold dark:font-bold') E-Mail
-          each e in data.business.contact.email
+          each e in business.contact.email
             a(class='grid grid-flow-col gap-3'
             href=`mailto:${e}`)
               +icon({ source: 'fontawesome', name: 'envelope' })(class='w-6 dark:invert')
               span=e
     .middle(class='container grid grid-cols-1 mx-auto justify-items-center md:flex md:justify-evenly')
-      if (data.business.socialLinks)
+      if (business.socialLinks)
         .social(class='mx-auto')
           p(class='mb-2 font-semibold dark:font-bold') Síguenos en nuestras redes sociales
           ul(class='grid grid-flow-col gap-3 justify-center mx-auto')
-            if (data.business.socialLinks.facebook.length)
-              each fb in data.business.socialLinks.facebook
+            if (business.socialLinks.facebook.length)
+              each fb in business.socialLinks.facebook
                 li.facebook(class=fb.elementClasses.join(' '))
                   a(href=`https://www.facebook.com/${fb.id}`)
                     +icon({ source: 'simple-icons', name: 'facebook' })(class='w-8 dark:invert')
-            if (data.business.socialLinks.instagram.length)
-              each ig in data.business.socialLinks.instagram
+            if (business.socialLinks.instagram.length)
+              each ig in business.socialLinks.instagram
                 li.instagram(class=ig.elementClasses.join(' '))
                   a(href=`https://www.instagram.com/${ig.id}`)
                     +icon({ source: 'simple-icons', name: 'instagram' })(class='w-8 dark:invert')
     .lower(class='container grid grid-cols-1 mx-auto mb-8')
-      p.copyright=`${data.business.name} 2022`
+      p.copyright=`${business.name} 2022`
