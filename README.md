@@ -59,16 +59,15 @@
 
 To create a new project:
 1. Clone the repo, or produce a new repo from the GitHub template.
-2. Rename `index.example.pug` to `index.pug` to start working.
+2. In your terminal, run `npm run dev` to initiate the `webpack-dev-server` on port 8000.
+3. Browse to `localhost:8000`. You should see the base template as outlined in the `src/views/index.pug` file.
+4. That's all. Start building or hacking right away!
 
-You have three available commands from the ground-up:
+You also have these other commands available:
 - `npm run build` will build the production-ready static site on `/dist` directory
-- `npm run dev` will initiate the `webpack-dev-server` on port 8000
 - `npm run watch` will build the site automatically whenever a change is made (but will not embed a webserver)
 
-And you can fine-tune the `package.json` scripts to your heart's contempt.
-
-For everything else, the documentation of each tool in the chain should suffice. There are links to everything this template depends on, do take a look.
+Remember to review the documentation of each library and tool that is used as listed in [Features](#Features).
 
 
 ## Adding images (and other assets)
