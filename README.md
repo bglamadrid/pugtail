@@ -63,12 +63,14 @@
 # Getting started
 
 To create a new project:
+
 1. Clone the repo, or produce a new repo from the GitHub template.
 2. In your terminal, run `npm run dev` to initiate the `webpack-dev-server` on port 8000.
 3. Browse to `localhost:8000`. You should see the base template as outlined in the `src/views/index.pug` file.
 4. That's all. Start building or hacking right away!
 
 You also have these other commands available:
+
 - `npm run build` will build the production-ready static site on `/dist` directory
 - `npm run watch` will build the site automatically whenever a change is made (but will not embed a webserver)
 
@@ -87,8 +89,10 @@ If you need to support additional image file extensions for other static files, 
 ## Adding or changing typographic fonts
 
 To do this:
+
 1. Indicate which ones you'll load at the `/src/includes/googlefonts.pug` subtemplate in the `families` array.
 2. Declare these same font families in the `tailwind.config.js` file, in the `theme.fontFamily` object.
+
 In the future I might be able to provide a mechanism for a single source of truth regarding typography. But for now, you have to keep both files in mind.
 
 
