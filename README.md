@@ -75,17 +75,13 @@ You also have these other commands available:
 Remember to review the documentation of each library and tool that is used as listed in [Features](#Features).
 
 
-## Adding images (and other assets)
+## Adding static files (images, videos, etc)
 
-To include images in your page, create a `/src/images` directory and add them there. These will not be versioned; this is by design, to help reduce the size of your repo.
+Add the files you wish to include to the `/src/web/assets` directory. Note that these will NOT be versioned; this is to help reduce the size of your repo.
 
-But of course, you can change this setup, e.g. if you want/need to use a different folder, or more than one. You just must pay attention to the:
-- Filepath patterns in the `/.gitignore` file.
-- Path aliases in the `webpack.config.js` file.
+Use the `require("~Assets/[...]")` syntax to include any files within your `.pug` templates (this syntax is supported thanks to the `pug-plugin`).
 
-Remember to `require()` all local assets referenced within your `.pug` templates, otherwise they won't be loaded (this syntax is established by the `pug-plugin`).
-
-You may also need to support additional image file extensions, if the ones provided in `webpack.config.js` don't suffice.
+If you need to support additional image file extensions for other static files, edit the module rules in the `webpack.config.base.js` file.
 
 
 ## Adding or changing typographic fonts

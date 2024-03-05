@@ -7,7 +7,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      Images: path.join(__dirname, './src/images'),
+      Assets: path.join(__dirname, './src/assets'),
       Scripts: path.join(__dirname, './src/web/scripts'),
       Views: path.join(__dirname, './src/web/views')
     }
