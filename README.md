@@ -86,9 +86,9 @@ If you need to support additional image file extensions for other static files, 
 
 ## Adding or changing typographic fonts
 
-If you want to choose and utilize other fonts than the default ones, you can follow these two steps:
-- Indicate which ones you'll load at the `/src/includes/googlefonts.pug` subtemplate, in the `families` array.
-- Declare these font families in the `tailwind.config.js` file, in the `theme.fontFamily` object.
+To do this:
+1. Indicate which ones you'll load at the `/src/includes/googlefonts.pug` subtemplate in the `families` array.
+2. Declare these same font families in the `tailwind.config.js` file, in the `theme.fontFamily` object.
 In the future I might be able to provide a mechanism for a single source of truth regarding typography. But for now, you have to keep both files in mind.
 
 
