@@ -94,12 +94,10 @@ In the future I might be able to provide a mechanism for a single source of trut
 
 ## Building in production mode
 
-You _must_ supply an `/src/environment.prod.ts` file to run a production build, otherwise the process will throw an error. This is due to a dependency from the contact form script.
-
-The contact script uses a POST call to an external, protected API for sending mails (whose implementation is left completely up to you, by the way). And as you'd expect, access to that API is meant to be secured. Which is why environment files are unversioned; to prevent leaking related secrets into the codebase.
+The project as-is has a contact script that depends on a `/src/environment.prod.json` file. You must supply one to run a production build, otherwise the process will throw an error.
 
 **But if you don't need to include a contact form**, you can either:
-- Comment or remove the `NormalModuleReplacementPlugin` bits in the `webpack.config.js` file.
+- Comment or remove the `NormalModuleReplacementPlugin` bits in the `webpack.config.*.js` file.
 - Rewrite the `/src/scripts/contact.ts` file, or remove it along with any references to it.
 
 
