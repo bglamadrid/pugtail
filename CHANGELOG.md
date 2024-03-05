@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- `data.json` has been split into three files, for better separation of concerns (and possibly authorities)
+  - `business.json`
+  - `environment.json`
+  - `site.json`
+- Renamed `index.example.pug` to `index.pug`, to avoid users of this project having to do this step themselves
+- Reestructured files intended to go as part of the static website output
+  - Moved subdirectories within root `src/`
+    - `src/scripts/` -> `src/web/scripts`
+    - `src/lib/` -> `src/web/lib`
+    - `src/views/` -> `src/web/views`
+  - Group view-specific files into their own directory within `src/web/views`
+    - `/src/web/views/index.pug` -> `/src/web/views/index/index.pug`
+    - `/src/web/scripts/index/splides.ts` -> `/src/web/views/index/splides.ts`
+    - `/src/web/scritps/index/scrolling_animations.pug` -> `/src/web/views/index/scrolling_animations.ts`
 - Default web port set to 8000 instead of 80
 
 ## [v1.1.2] - 2022-09-27
