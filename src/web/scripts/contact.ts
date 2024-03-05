@@ -1,6 +1,6 @@
 import { EMPTY, finalize, from, fromEvent, map, Observable, of, switchMap, tap } from 'rxjs';
-import * as business from '../business.json';
-import * as environment from '../environment.json';
+import * as business from '../../business.json';
+import * as environment from '../../environment.json';
 
 const ENDPOINT_URL = environment.endpoints.contact.url;
 const ENDPOINT_SECRET = environment.endpoints.contact.secret;

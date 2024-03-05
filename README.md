@@ -31,23 +31,28 @@
   - [Splide](https://splidejs.com) to create accessible carousels (and alike UI elements) with ease and flexibility.
   - [Animate.css](https://animate.style) to have a defined set of CSS keyframes (animations) to work with.
   - [RxJS](https://rxjs.dev) to add readable, async client-side functionality.
-- A simple project structure
-  - Scripts to include common design feats
-    - `/src/lib/scrolling_animations.ts` provides a TS type and an RxJS function to easily include animations triggered when scrolling down to elements targetted by query selectors.
-    - `/src/lib/splides.ts` exports a typed function to invoke `Splide`s in your page with very little code.
-    - `/src/scripts/contact.ts` is a simple script to provide submission of a contact form. It depends on an environment file to provide some variables, read section `Building in production mode` below.
-    - `/src/scripts/mobile_nav.ts` does minor DOM changes in order to provide a responsive navigation menu with a toggle button, akin to most frameworks and CMS.
-    - All of these are included in the packaged `index.pug.example` file
-  - Pug mixin functions used as building blocks
+- A clear, concise project structure starting with the `/src/` folder
+  - At its root, there's the core data JSON files, these can be read by both the client and server.
+    - `environment.json` contains vital information for deploying the site and interacting with others
+    - `site.json` contains hints about the desired website structure and its textual information
+    - `business.json` contains information about the website's business itself, such as name and legal paraphernalia
+  - In the `web/` folder reside all files that should be included
+    - The `lib/` directory has snippets for predefined common functionality that can be given parameters to work with
+      - `scrolling_animations.ts` to trigger animations when scrolling down to elements specified by query selectors.
+      - `splides.ts` to create carousels using the `Splide` library
+    - The `scripts/` directory has some simple pre-estructured functionality that can only be reused as-is
+      - `mobile_nav.ts` does minor changes to the DOM in order to provide a responsive navigation menu with a toggle button, akin to most frameworks and CMS.
+      - `contact.ts` to submit a contact form with AJAX through RxJS. It reads variables from the `environment.json` file.
+  - In the `mixins` directory you can find predefined building blocks for the Pug markup
     - Header & footer
-    - Contact form
+    - Contact form (without the script mentioned above)
     - Google Maps iFrame Embed
     - Metatags
     - Icons from awesome free libraries, served through jsDelivr CDN
       - [FontAwesome Free](https://fontawesome.com)
       - [SimpleIcons.org](https://simpleicons.org)
-  - Pug subtemplates (that can be `include`d)
-    - Fonts served by public Google Fonts CDN
+  - The `includes` directory has only one subtemplate
+    - `googlefonts.pug` links all the fonts used site-wide, as served by the public Google Fonts CDN
 
 
 # Requirements

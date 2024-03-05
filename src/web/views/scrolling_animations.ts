@@ -1,5 +1,5 @@
 import { fromEvent, switchMap, takeUntil, tap } from "rxjs";
-import { AnimatedElementPartialMetadata, startAnimations } from "../../lib/scrolling_animations";
+import { AnimatedElementPartialMetadata, startAnimations } from "../lib/scrolling_animations";
 
 const ELEMENTS: AnimatedElementPartialMetadata[] = [
   {

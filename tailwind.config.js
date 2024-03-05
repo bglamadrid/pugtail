@@ -5,9 +5,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: {
     files: [
-      './src/views/**/*.pug',
+      './src/web/views/**/*.pug',
       './src/mixins/**/*.pug',
-      './src/scripts/**/*.ts',
+      './src/web/scripts/**/*.ts',
       './src/data.json'
     ]
   },
