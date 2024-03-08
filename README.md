@@ -31,28 +31,30 @@
   - [Splide](https://splidejs.com) to create accessible carousels (and alike UI elements) with ease and flexibility.
   - [Animate.css](https://animate.style) to have a defined set of CSS keyframes (animations) to work with.
   - [RxJS](https://rxjs.dev) to add readable, async client-side functionality.
-- A clear, concise project structure starting with the `/src/` folder
-  - At its root, there's the core data JSON files, these can be read by both the client and server.
-    - `environment.json` contains vital information for deploying the site and interacting with others
-    - `site.json` contains hints about the desired website structure and its textual information
-    - `business.json` contains information about the website's business itself, such as name and legal paraphernalia
-  - In the `web/` folder reside all files that should be included
-    - The `lib/` directory has snippets for predefined common functionality that can be given parameters to work with
-      - `scrolling_animations.ts` to trigger animations when scrolling down to elements specified by query selectors.
-      - `splides.ts` to create carousels using the `Splide` library
-    - The `scripts/` directory has some simple pre-estructured functionality that can only be reused as-is
-      - `mobile_nav.ts` does minor changes to the DOM in order to provide a responsive navigation menu with a toggle button, akin to most frameworks and CMS.
-      - `contact.ts` to submit a contact form with AJAX through RxJS. It reads variables from the `environment.json` file.
-  - In the `mixins` directory you can find predefined building blocks for the Pug markup
-    - Header & footer
-    - Contact form (without the script mentioned above)
-    - Google Maps iFrame Embed
-    - Metatags
-    - Icons from awesome free libraries, served through jsDelivr CDN
-      - [FontAwesome Free](https://fontawesome.com)
-      - [SimpleIcons.org](https://simpleicons.org)
-  - The `includes` directory has only one subtemplate
-    - `googlefonts.pug` links all the fonts used site-wide, as served by the public Google Fonts CDN
+- An intuitive, easy-to-follow project structure.
+  - `/src` - The sources root folder. Before delving into directories, there are some JSON files storing core data. These files can be read/loaded into the compilation process as well as being fully or partially included in the output files.
+    - `environment.json` - Contains vital information for deploying the website and interacting with APIs.
+    - `site.json` - Holds hints about the content and structure of the website, as well as some commonly used text.
+    - `business.json` - Contains information about the authors and their business, such as contact information.
+    - `web/` - As you may guess, holds all files that will be processed to create the website itself.
+      - `lib/` - Has parameterized client-side code snippets for functionality that is common of many other websites in the internet.
+        - `scrolling_animations.ts` - Can trigger animations when scrolling down to elements specified from query selectors.
+        - `splides.ts` - Can create accesible carousels using the `Splide` library.
+      - `scripts/` - Holds some simple functionality that can only be reused as-is.
+        - `mobile_nav.ts` - Does minor changes to the DOM in order to provide a responsive navigation menu with a toggle button, akin to most frameworks and CMS.
+        - `contact.ts` - Enables submission of a contact form using AJAX. All of it is implemented with RxJS. It also reads variables from the `environment.json` file, so it alone makes is mandatory to include at least part of that file in the output.
+      - `views/` - Where all the Pug templates and page-specific scripts go.
+        - `index/` comes by default, with `index.pug` and two page scripts for this view only.
+    - `includes/` - Contains subtemplate to be used as-is. There's only one in this template though.
+      - `googlefonts.pug` - Links all the fonts used site-wide, as served by the public Google Fonts CDN.
+    - `mixins/` - Has parameterized Pug building blocks. It is divided by categories.
+      - `header.pug` & `footer.pug` - These used to be in the `includes` directory, but now, instead, they require all the core data (from the JSON files).
+      - `contact-form.pug` - This
+      - Google Maps iFrame Embed - Requires the place ID.
+      - Website metatags - For better SEO, includes tags for Facebook, Twitter and Google.
+      - Icons from free libraries, served through jsDelivr CDN. This mixin supports two sources:
+        - [FontAwesome Free](https://fontawesome.com)
+        - [SimpleIcons.org](https://simpleicons.org)
 
 
 # Requirements
