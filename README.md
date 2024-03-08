@@ -109,7 +109,7 @@ The project as-is has a contact script that depends on a `/src/environment.prod.
 
 # Contributing
 
-Pugtail is an early-stage project template. If you have any suggestions, ideas, or find any bugs while using it, please do not hesitate to create an issue, and hopefully stick around to answer any questions.
+Pugtail is still an early-stage project template. If you have any suggestions, ideas, or find any bugs while using it, please do not hesitate to create an issue for it.
 
 PRs are also totally welcome.
 
