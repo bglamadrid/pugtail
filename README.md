@@ -68,7 +68,7 @@ To create a new project:
 
 1. Clone the repo, or produce a new repo from the GitHub template.
 2. In your terminal, run `npm run dev` to initiate the `webpack-dev-server` on port 8000.
-3. Browse to `localhost:8000`. You should see the base template as outlined in the `src/views/index.pug` file.
+3. Browse `http://localhost:8000`. You should see the base template as outlined in the `/src/views/index.pug` file.
 4. That's all. Start building or hacking right away!
 
 You also have these other commands available:
@@ -83,9 +83,9 @@ Remember to review the documentation of each library and tool that is used as li
 
 Add the files you wish to include to the `/src/web/assets` directory. Note that these will NOT be versioned; this is to help reduce the size of your repo.
 
-Use the `require("~Assets/[...]")` syntax to include any files within your `.pug` templates (this syntax is supported thanks to the `pug-plugin`).
+Use the `require("~Assets/[...]")` syntax to include any files within your `*.pug` templates (this syntax is supported thanks to the `pug-plugin`).
 
-If you need to support additional image file extensions for other static files, edit the module rules in the `webpack.config.base.js` file.
+If you need to support additional image file extensions for other static files, edit the module rules in the `/webpack.config.base.js` file.
 
 
 ## Adding or changing typographic fonts
@@ -93,7 +93,7 @@ If you need to support additional image file extensions for other static files, 
 To do this:
 
 1. Indicate which ones you'll load at the `/src/includes/googlefonts.pug` subtemplate in the `families` array.
-2. Declare these same font families in the `tailwind.config.js` file, in the `theme.fontFamily` object.
+2. Declare these same font families in the `/tailwind.config.js` file, in the `theme.fontFamily` object.
 
 In the future I might be able to provide a mechanism for a single source of truth regarding typography. But for now, you have to keep both files in mind.
 
@@ -103,7 +103,7 @@ In the future I might be able to provide a mechanism for a single source of trut
 The project as-is has a contact script that depends on a `/src/environment.prod.json` file. You must supply one to run a production build, otherwise the process will throw an error.
 
 **But if you don't need to include a contact form**, you can either:
-- Comment or remove the `NormalModuleReplacementPlugin` bits in the `webpack.config.*.js` file.
+- Comment or remove the `NormalModuleReplacementPlugin` bits in the `/webpack.config.*.js` file.
 - Rewrite the `/src/web/scripts/contact.ts` file, or remove it along with any references to it.
 
 
