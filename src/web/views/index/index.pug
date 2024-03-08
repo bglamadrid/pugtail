@@ -1,12 +1,12 @@
-include ../../mixins/extensions/google-drive-embed.pug
-include ../../mixins/extensions/google-maps-embed.pug
-include ../../mixins/metatags/self.pug
-include ../../mixins/metatags/facebook.pug
-include ../../mixins/metatags/twitter.pug
-include ../../mixins/contact-form.pug
-include ../../mixins/footer.pug
-include ../../mixins/header.pug
-include ../../mixins/icon.pug
+include ../../../mixins/extensions/google-drive-embed.pug
+include ../../../mixins/extensions/google-maps-embed.pug
+include ../../../mixins/metatags/self.pug
+include ../../../mixins/metatags/facebook.pug
+include ../../../mixins/metatags/twitter.pug
+include ../../../mixins/contact-form.pug
+include ../../../mixins/footer.pug
+include ../../../mixins/header.pug
+include ../../../mixins/icon.pug
 
 -
   const pageMetadata = {
@@ -26,14 +26,14 @@ html(lang=site.locale)
     link(href='https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css' rel='stylesheet')
     link(href='https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css' rel='stylesheet')
 
-    link(href=require('../styles.css') rel='stylesheet')
+    link(href=require('../../styles.css') rel='stylesheet')
     //- link(href=require('../favicon.ico') rel='icon' type='image/x-icon')
     script(defer src=require('~Scripts/contact.ts'))
     script(defer src=require('~Scripts/mobile_nav.ts'))
     script(defer src=require('./splides.ts'))
     script(defer src=require('./scrolling_animations.ts'))
 
-    include ../../includes/googlefonts.pug
+    include ../../../includes/googlefonts.pug
 
     title=pageMetadata.title
 

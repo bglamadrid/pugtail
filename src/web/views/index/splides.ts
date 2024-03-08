@@ -1,5 +1,5 @@
 import { fromEvent, switchMap, takeUntil } from "rxjs";
-import { SplideMetadata, startSplides } from "../lib/splides";
+import { SplideMetadata, startSplides } from "../../lib/splides";
 
 const ELEMENTS: SplideMetadata[] = [
   {
