@@ -104,7 +104,7 @@ The project as-is has a contact script that depends on a `/src/environment.prod.
 
 **But if you don't need to include a contact form**, you can either:
 - Comment or remove the `NormalModuleReplacementPlugin` bits in the `webpack.config.*.js` file.
-- Rewrite the `/src/scripts/contact.ts` file, or remove it along with any references to it.
+- Rewrite the `/src/web/scripts/contact.ts` file, or remove it along with any references to it.
 
 
 # Contributing
