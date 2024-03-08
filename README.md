@@ -74,7 +74,7 @@ To create a new project:
 You also have these other commands available:
 
 - `npm run build` will build the production-ready static site on `/dist` directory
-- `npm run watch` will build the site automatically whenever a change is made (but will not embed a webserver)
+- `npm run watch` will build the site automatically whenever a change is made (but will not embed a webserver, so you can deploy yours)
 
 Remember to review the documentation of each library and tool that is used as listed in [Features](#Features).
 
