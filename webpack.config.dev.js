@@ -31,7 +31,9 @@ module.exports = {
         options: {
           esModule: true,
           data: {
-            environment: require('./src/environment.js')
+            environment: require('./src/environment.json'),
+            site: require('./src/site.json'),
+            business: require('./src/business.json')
           }
         }
       }

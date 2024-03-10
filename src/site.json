@@ -1,0 +1,46 @@
+{
+    "locale": "en",
+    "navigation": {
+        "enabled": false,
+        "links": [
+            {
+                "url": "#",
+                "title": "Home"
+            },
+            {
+                "url": "#about",
+                "title": "About Us"
+            },
+            {
+                "url": "#services",
+                "title": "Services"
+            },
+            {
+                "url": "https://google.com",
+                "title": "Google"
+            }
+        ]
+    },
+    "extensions": {
+        "google": {
+            "maps": [
+                {
+                    "usage": "iframe-embed",
+                    "queryParams": {
+                        "pb": ""
+                    },
+                    "title": "Google Maps location"
+                }
+            ],
+            "drive": [
+                {
+                    "usage": "iframe-embed",
+                    "queryParams": {
+                        "id": ""
+                    },
+                    "title": "Google Drive folder"
+                }
+            ]
+        }
+    }
+}

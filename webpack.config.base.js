@@ -2,14 +2,14 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    index: './src/views/index.pug'
+    index: './src/web/views/index/index.pug'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      Images: path.join(__dirname, './src/images'),
-      Scripts: path.join(__dirname, './src/scripts'),
-      Views: path.join(__dirname, './src/views')
+      Assets: path.join(__dirname, './src/assets'),
+      Scripts: path.join(__dirname, './src/web/scripts'),
+      Views: path.join(__dirname, './src/web/views')
     }
   },
   module: {

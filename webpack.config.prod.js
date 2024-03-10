@@ -37,7 +37,9 @@ module.exports = {
         options: {
           esModule: true,
           data: {
-            environment: require('./src/environment.prod.js') // for pug templates
+            environment: require('./src/environment.prod.json'), // for pug templates
+            site: require('./src/site.json'),
+            business: require('./src/business.json')
           }
         }
       }

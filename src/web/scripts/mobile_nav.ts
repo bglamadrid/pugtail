@@ -6,6 +6,11 @@ const HOME_LINK_CONTAINER_SELECTOR = 'header > .container > .upper > a.logo';
 const NAV_SELECTOR = 'header > .container > nav';
 const DOES_MOBILE_NAV_START_CLOSED = false;
 
+const iconCdnBaseUrl = 'https://cdn.jsdelivr.net/npm';
+const fontAwesomeNpmPackage = '@fortawesome/fontawesome-free@6';
+const navButtonIconRoute = 'svgs/solid/bars.svg';
+const navButtonIconUrl = `${iconCdnBaseUrl}/${fontAwesomeNpmPackage}/${navButtonIconRoute}`;
+
 let headerRef: HTMLElement;
 let upperMobileHeaderRef: HTMLElement;
 let homeLinkContainerRef: HTMLAnchorElement;
@@ -45,13 +50,11 @@ fromEvent(document, 'DOMContentLoaded').pipe(
 
 function createNavToggleButton() {
   const bareButton = document.createElement('button');
-  return {
-    ...bareButton,
-    type: 'button',
-    className: 'z-30 duration-300 h-full p-4 bg-gray-100 dark:bg-gray-700 md:hidden',
-    ariaLabel: 'Ir a...',
-    innerHTML: '<img class="icon w-4 dark:invert" alt="bars" src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/bars.svg" />'
-  } as HTMLButtonElement;
+  bareButton.type = 'button';
+  bareButton.className = 'z-30 duration-300 h-full p-4 bg-gray-100 dark:bg-gray-700 md:hidden';
+  bareButton.ariaLabel = 'Ir a...';
+  bareButton.innerHTML = `<img class="icon w-4 dark:invert" alt="bars" src="${navButtonIconUrl}" />`;
+  return bareButton;
 }
 
 function toggleNav() {
