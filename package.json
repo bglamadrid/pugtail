@@ -1,6 +1,6 @@
 {
   "name": "pugtail",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A Pug/TailwindCSS JAMStack template for quickly building awesome static websites",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
