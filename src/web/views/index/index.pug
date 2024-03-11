@@ -45,10 +45,10 @@ html(lang=site.locale)
     h1(class='hidden')=pageTitle
     +header(environment, site, business)
     section#facade(class='bg-slate-200 dark:bg-slate-700')
-      .container(class='grid grid-cols-1 content-center justify-items-center max-w-screen-xl mx-auto md:min-h-fullscreen')
-        .splide(class='my-16 md:mx-16' aria-label='Carrusel de ejemplo')
-          .splide__arrows
-          .splide__track
+      div.container(class='grid grid-cols-1 content-center justify-items-center max-w-screen-xl mx-auto md:min-h-fullscreen')
+        div.splide(class='my-16 md:mx-16' aria-label='Carrusel de ejemplo')
+          div.splide__arrows
+          div.splide__track
             ul.splide__list
               li.splide__slide
                 img(src='https://fakeimg.pl/1200x400' alt='Example photo')
@@ -57,36 +57,36 @@ html(lang=site.locale)
               li.splide__slide
                 img(src='https://fakeimg.pl/1200x400' alt='Example photo')
     section#services
-      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-xl mx-auto md:gap-6')
+      div.container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-xl mx-auto md:gap-6')
         h2(class='mt-16') Services
-        .grid(class='gap-2 grid-cols-2 justify-items-center content-center mb-16 px-2 md:grid-cols-3 lg:grid-cols-none lg:grid-flow-col md:gap-4 md:px-4')
+        div.grid(class='gap-2 grid-cols-2 justify-items-center content-center mb-16 px-2 md:grid-cols-3 lg:grid-cols-none lg:grid-flow-col md:gap-4 md:px-4')
           each service, serviceClassName in business.services
             - const thumbSrc = service.thumb.aliasedUrl ? require(service.thumb.aliasedUrl) : service.thumb.absoluteUrl;
-            .card(class='shadow rounded bg-slate-700 ' + serviceClassName)
+            div.card(class='shadow rounded bg-slate-700 ' + serviceClassName)
               h3(class='text-center my-2')=service.name
               img.thumb(src=thumbSrc
               aria-hidden='true'
               loading='lazy')
     section#about(class='bg-slate-200 dark:bg-slate-700')
-      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
-        .grid(class='gap-4 justify-items-center content-center px-4 my-16 md:grid-flow-col')
+      div.container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
+        div.grid(class='gap-4 justify-items-center content-center px-4 my-16 md:grid-flow-col')
           each node, nodeClassName in business.about
-            .card(class='grid gap-4 place-content-center p-8 shadow rounded bg-white dark:bg-slate-800 ' + nodeClassName)
+            div.card(class='grid gap-4 place-content-center p-8 shadow rounded bg-white dark:bg-slate-800 ' + nodeClassName)
               +icon(node.icon)(class='w-8 mx-auto dark:invert sm:w-12')
               h2(class='text-center')=node.title
               each paragraph in node.paragraphs
                 p(class='text-center')=paragraph
     section#contact
-      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto px-4 md:gap-6 lg:px-0')
+      div.container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto px-4 md:gap-6 lg:px-0')
         h2(class='mt-16') Contact
         p(class='text-center') You can leave us a message through this form.
         +contact-form()(class='mb-16')
     section#storage(class='bg-slate-200 dark:bg-slate-700')
-      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
+      div.container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
         h2(class='mt-16')=site.extensions.google.drive[0].title
         +google-drive-embed(site.extensions.google.drive[0])(class='h-40 w-5/6 mb-16 md:h-64')
     section#location
-      .container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
+      div.container(class='grid grid-cols-1 gap-4 justify-items-center max-w-screen-lg mx-auto md:gap-6')
         h2(class='mt-16')=site.extensions.google.maps[0].title
         +google-maps-embed(site.extensions.google.maps[0])(class='h-40 w-5/6 mb-16 md:h-64')
     +footer(business)

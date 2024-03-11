@@ -2,9 +2,9 @@ include ./icon.pug
 
 mixin footer(business)
   footer(class='grid grid-cols-1 gap-6 text-center bg-slate-300 dark:bg-slate-900 md:gap-12')
-    .upper(class='container grid grid-cols-1 mx-auto mt-8 md:flex md:justify-evenly')
+    div.upper(class='container grid grid-cols-1 mx-auto mt-8 md:flex md:justify-evenly')
       if (business.contact.whatsapp.length)
-        .whatsapp(class='mx-auto my-4')
+        div.whatsapp(class='mx-auto my-4')
           p(class='mb-2 font-semibold dark:font-bold') WhatsApp
           each w in business.contact.whatsapp
             a(class='grid grid-flow-col gap-3'
@@ -12,7 +12,7 @@ mixin footer(business)
               +icon({ source: 'simple-icons', name: 'whatsapp' })(class='w-6 dark:invert')
               span=w.prettifiedNumber
       if (business.contact.phone.length)
-        .phone(class='mx-auto my-4')
+        div.phone(class='mx-auto my-4')
           p(class='mb-2 font-semibold dark:font-bold') Fono
           each p in business.contact.phone
             a(class='grid grid-flow-col gap-3'
@@ -20,16 +20,16 @@ mixin footer(business)
               +icon({ source: 'fontawesome', name: 'phone' })(class='w-6 dark:invert')
               span=p.prettifiedNumber
       if (business.contact.email.length)
-        .email(class='mx-auto my-4')
+        div.email(class='mx-auto my-4')
           p(class='mb-2 font-semibold dark:font-bold') E-Mail
           each e in business.contact.email
             a(class='grid grid-flow-col gap-3'
             href=`mailto:${e}`)
               +icon({ source: 'fontawesome', name: 'envelope' })(class='w-6 dark:invert')
               span=e
-    .middle(class='container grid grid-cols-1 mx-auto justify-items-center md:flex md:justify-evenly')
+    div.middle(class='container grid grid-cols-1 mx-auto justify-items-center md:flex md:justify-evenly')
       if (business.socialLinks)
-        .social(class='mx-auto')
+        div.social(class='mx-auto')
           p(class='mb-2 font-semibold dark:font-bold') Síguenos en nuestras redes sociales
           ul(class='grid grid-flow-col gap-3 justify-center mx-auto')
             if (business.socialLinks.facebook.length)
@@ -42,5 +42,5 @@ mixin footer(business)
                 li.instagram(class=ig.elementClasses.join(' '))
                   a(href=`https://www.instagram.com/${ig.id}`)
                     +icon({ source: 'simple-icons', name: 'instagram' })(class='w-8 dark:invert')
-    .lower(class='container grid grid-cols-1 mx-auto mb-8')
+    div.lower(class='container grid grid-cols-1 mx-auto mb-8')
       p.copyright=`${business.name} 2022`

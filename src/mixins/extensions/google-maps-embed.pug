@@ -2,7 +2,7 @@ mixin google-maps-embed(instanceData)
   if (instanceData.usage === 'iframe-embed')
     -
       const gmapUrl = (pb) => `https://www.google.com/maps/embed?pb=${pb}`;
-    .gmap(class!=attributes.class)
+    div.gmap(class!=attributes.class)
       iframe(src!=gmapUrl(instanceData.queryParams.pb)
         title=instanceData.title
         frameborder='0'

@@ -2,7 +2,7 @@ mixin google-drive-embed(instanceData)
   if (instanceData.usage === 'iframe-embed')
     -
       const gdriveUrl = (id) => `https://drive.google.com/embeddedfolderview?id=${id}#grid`;
-    .grive(class!=attributes.class)
+    div.grive(class!=attributes.class)
       iframe(src!=gdriveUrl(instanceData.queryParams.id)
         title=instanceData.title
         frameborder='0'
