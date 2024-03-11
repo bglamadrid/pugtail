@@ -4,10 +4,10 @@ mixin google-drive-embed(instanceData)
       const gdriveUrl = (id) => `https://drive.google.com/embeddedfolderview?id=${id}#grid`;
     div.gdrive(class!=attributes.class)
       iframe(src!=gdriveUrl(instanceData.queryParams.id)
-        title=instanceData.title
-        frameborder='0'
-        allowfullscreen='true'
-        aria-hidden='false'
-        width='100%'
-        height='100%'
-        tabindex='0')
+      title=instanceData.title
+      frameborder='0'
+      allowfullscreen='true'
+      aria-hidden='false'
+      width='100%'
+      height='100%'
+      tabindex='0')

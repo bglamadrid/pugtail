@@ -4,10 +4,10 @@ mixin google-maps-embed(instanceData)
       const gmapUrl = (pb) => `https://www.google.com/maps/embed?pb=${pb}`;
     div.gmap(class!=attributes.class)
       iframe(src!=gmapUrl(instanceData.queryParams.pb)
-        title=instanceData.title
-        frameborder='0'
-        allowfullscreen='true'
-        aria-hidden='false'
-        width='100%'
-        height='100%'
-        tabindex='0')
+      title=instanceData.title
+      frameborder='0'
+      allowfullscreen='true'
+      aria-hidden='false'
+      width='100%'
+      height='100%'
+      tabindex='0')
